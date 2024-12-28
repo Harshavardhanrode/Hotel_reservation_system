@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+    *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .main_container{
+	background-color:rgb(236, 181, 119);
+    height: 100vh;
+    width: 100vw;
+    }
+    nav{
+        height: 60px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: white;
+    }
+    .div1{
+        display: flex;
+        justify-content: center;
+        font-size: x-large;
+        letter-spacing: 1px;
+        width: 70%;
+    }
+    .div2{
+        height: 50px;
+        width: 30%;
+        /*background-color: blueviolet;*/
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .nav_container{
+        height: 25px;
+        /*background-color: aqua;*/
+        display: flex;
+        align-items: center;
+        padding: 2px 4px 2px 4px;
+        border-radius: 5%;
+        font-size: larger;
+    }
+    .nav_container:hover{
+        background-color: rgb(191, 197, 201);
+
+    }
+    .container{
+        height: 80vh;  
+    }
+    button{
+        font-size: 20px;
+        padding: 5px;
+        
+        border-radius: 5%;
+    }
+    #register_view-cancel{
+        height: 100px;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+    .images_scroller {
+    display: flex; 
+    gap: 15px; 
+    overflow-x: scroll; 
+    overflow-y: hidden; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    scroll-behavior: smooth;
+}
+
+.images_scroller::-webkit-scrollbar {
+    display: none; 
+}
+
+.images_scroller img {
+    height: 300px; 
+    width: auto; 
+    object-fit: cover; 
+    border-radius: 5px; 
+}
+
+</style>
+</head>
+<body>
+    <div class="main_container">
+        <nav>
+            <div class="div1">
+                <div id="hotel_name"> Hotel Bliss Dining </div>
+            </div>
+            <div class="div2">
+                <div class="nav_container" id="home">Home</div>
+                
+                <div class="nav_container" id="admin_login"> Admin Login</div>
+                <div  class="nav_container" id="about">About</div>
+            </div>   
+        </nav>
+        <div class="container">
+            <h2 style="margin: 20px;">welcome to Hotel Bliss..!</h2>
+            <div id="register_view-cancel">
+                <button  onclick="addroom()">add room</button>
+                <button  onclick="cancelroom()">cancel room</button>
+                
+            </div>
+            <div class="images_scroller">
+                <img src="img/p1.jpg">
+                <img src="img/p2.jpg">
+                <img src="img/p3.jpg">
+                <img src="img/p4.jpg">
+                <img src="img/p5.jpg">
+                <img src="img/p6.jpg">
+                <img src="img/p7.jpg">
+                
+            </div>
+            
+        </div> 
+    </div>
+       
+	
+<script>//alert("login sucessfully");
+    
+
+
+let home_button = document.getElementById("home");
+let booking_button = document.getElementById("booking");
+let login_button = document.getElementById("customer_login");
+let admin_login_button = document.getElementById("admin_login");
+let about_button = document.getElementById("about");
+home_button.addEventListener('click',()=>{
+    window.location.href = 'index.html';
+})
+ admin_login_button.addEventListener('click',()=>{
+    window.location.href = 'addminLogin.html';
+})
+function addroom(){
+    window.location.href = 'registerRoom.html';
+}
+function cancelroom(){
+    window.location.href = 'cancelRoom.html';
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!--  <form action="CustomerServlet" method="POST">
+    <input type="hidden" name="action" value="login">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <button type="submit">Login</button>
+</form>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .main_container{
+	background-color:rgb(236, 181, 119);
+    height: 100vh;
+    width: 100vw;
+    }
+    nav{
+        height: 60px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: white;
+    }
+    .div1{
+        display: flex;
+        justify-content: center;
+        font-size: x-large;
+        letter-spacing: 1px;
+        width: 50%;
+    }
+    .div2{
+        height: 50px;
+        width: 50%;
+        /*background-color: blueviolet;*/
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .nav_container{
+        height: 25px;
+        /*background-color: aqua;*/
+        display: flex;
+        align-items: center;
+        padding: 2px 4px 2px 4px;
+        border-radius: 5%;
+        font-size: larger;
+    }
+    .nav_container:hover{
+        background-color: rgb(191, 197, 201);
+    }
+
+    .container{
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .login_container{
+        height: 400px;
+        width: 350px;
+        background-color: blue;
+        border-radius: 5%;
+        background-image: url("img/login_back.jpeg");
+        background-size: cover;
+	    background-repeat: no-repeat;
+    }
+    form{
+    display: flex;
+    box-sizing: border-box;
+    padding: 50px;
+    flex-direction: column;
+      
+    }
+    h1{
+    margin-bottom: 35px;
+    font-size: 30px;  
+    font-weight: 300; 
+    color: white;
+}
+label{
+    letter-spacing: 2px;
+    margin-top: 25px;
+    padding-left: 13px;
+    color: white;
+    
+}
+input{
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0.199);
+    height: 35px;  
+    border-radius: 20px;
+    color: white;
+    border: none;
+    box-shadow: 0px 0px 5px black;
+    padding-left: 20px;
+    
+}
+input:hover{
+    background-color: rgba(254, 254, 254, 0.146);
+}
+button{ 
+    height: 40px;
+    border-radius: 20px;
+    color: rgb(237, 227, 227);
+    font-size: 15px;
+    font-weight: 500;
+    background-color: rgba(254, 254, 254, 0.247);
+    border: none; 
+    box-shadow: 0px 0px 5px black;
+    margin-top: 25px; 
+    margin-bottom: 4px; 
+}
+button:hover{
+    background-color: rgba(254, 254, 254, 0.146);
+}
+a{
+    font-size: 15px;
+    color: white;
+    margin-left: 20px;
+}
+    </style>
+</head>
+<body>
+    <div class="main_container">
+        <nav>
+            <div class="div1">
+                <div id="hotel_name"> Hotel Bliss Dining </div>
+            </div>
+            <div class="div2">
+                <div class="nav_container" id="home">Home</div>
+                <div class="nav_container" id="booking">Booking</div>
+                <div class="nav_container" id="customer_login">login</div>
+                <div class="nav_container" id="admin_login"> Admin Login</div>
+                <div  class="nav_container" id="about">About</div>
+            </div>   
+        </nav>
+        <div class="container">
+            <div class="login_container">
+                <form action="CustomerServlet" method="POST">
+                    <h1>Login In</h1>
+                    <input type="hidden" name="action" value="login">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Login</button>
+                    <a href="customerSignup.html">Sign Up</a>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+
+        let home_button = document.getElementById("home");
+        let booking_button = document.getElementById("booking");
+        let login_button = document.getElementById("customer_login");
+        let admin_login_button = document.getElementById("admin_login");
+        let about_button = document.getElementById("about");
+        home_button.addEventListener('click',()=>{
+            window.location.href = 'index.html';
+        })
+         login_button.addEventListener('click',()=>{
+            window.location.href = 'customerLogin.html';
+        })
+         admin_login_button.addEventListener('click',()=>{
+            window.location.href = 'addminLogin.html';
+        })
+         home_button.addEventListener('click',()=>{
+            window.location.href = 'index.html';
+        })
+    </script>
+</body>
+</html>

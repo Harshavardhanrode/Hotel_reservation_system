@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <style>
+    	
+
+*{
+	margin:0px;
+	padding:0px;
+}
+.main_container{
+	background-color:rgb(236, 181, 119);
+    height: 100vh;
+    width: 100vw;
+}
+nav{
+	height: 60px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	background-color: white;
+}
+.div1{
+	display: flex;
+	justify-content: center;
+	font-size: x-large;
+	letter-spacing: 1px;
+	width: 50%;
+}
+.div2{
+	height: 50px;
+	width: 50%;
+	/*background-color: blueviolet;*/
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.nav_container{
+	height: 25px;
+	/*background-color: aqua;*/
+	display: flex;
+	align-items: center;
+	padding: 2px 4px 2px 4px;
+	border-radius: 5%;
+	font-size: larger;
+}
+.nav_container:hover{
+	background-color: rgb(191, 197, 201);
+}
+
+#body_container{
+	height: 548px;
+	background-color: rgb(247, 240, 240);
+	display: flex;
+	
+}
+img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+}
+section{
+	height:548px;
+	width: 75%;
+	background-color: white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+}
+#aside_div{
+	height: 300px;
+	width: 300px;
+	background-color: rgb(21, 22, 21);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	border-radius: 5%;
+}
+
+aside{
+	width: 30%;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+#aside_div1{
+	height: 20%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/*background-color: blue;*/
+	font-size: 20px;
+	letter-spacing: 2px;
+	padding-bottom: 10px;
+
+}
+#image_panel{
+	height: 200px;
+	background-color: rgb(244, 169, 85);
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	overflow-x: auto; 
+    gap: 10px; 
+    padding: 10px; 
+}
+#image_panel img {
+    height: 150px;
+    width: auto; 
+    object-fit: contain; 
+}
+
+
+footer{
+	height: 40px;
+	background-color: black;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+    	
+    </style>
+
+</head>
+<body>
+    <div class="main_container">
+        <nav>
+            <div class="div1">
+                <div id="hotel_name"> Hotel Bliss Dining </div>
+            </div>
+            <div class="div2">
+                <div class="nav_container" id="home">Home</div>
+                <div class="nav_container" id="booking">Booking</div>
+                <div class="nav_container" id="customer_login">login</div>
+                <div class="nav_container" id="admin_login"> Admin Login</div>
+                <div  class="nav_container" id="about">About</div>
+            </div>   
+        </nav>
+
+        <div id="body_container">
+            <section>
+                <img src="img/img2.jpg" alt="Hotel Room">
+            </section>
+            <aside id="side_portion">
+                <div id="aside_div">
+                    <div id="aside_div1">
+                        <p> <b>Hotel Bliss dinning</b></p>
+                    </div>
+                    <div id="aside_div2">
+                           Experience luxury and comfort with Hotel Bliss Dining offers spacious rooms with breathtaking views and exceptional hospitality. Whether you're here for leisure or business, our premium services and serene ambiance ensure a memorable stay. Enjoy gourmet dining, relax in our spa, Your perfect getaway starts here! 
+                    </div>
+                    
+                </div>
+    
+            </aside>
+        </div>
+        
+        <div id="image_panel">
+            <img src="img/p1.jpg">
+            <img src="img/p2.jpg">
+            <img src="img/p3.jpg">
+            <img src="img/p4.jpg">
+            <img src="img/p5.jpg">
+            <img src="img/p6.jpg">
+            <img src="img/p7.jpg">
+            <img src="img/p8.jpeg">
+            <img src="img/p9.jpeg">
+
+         </div>
+        
+        <footer>
+            <p>&copy; 2024 Hotel Bliss Dining. All rights reserved.</p>
+        </footer>
+        
+
+
+    </div>
+    <script>
+
+
+        let home_button = document.getElementById("home");
+        let booking_button = document.getElementById("booking");
+        let login_button = document.getElementById("customer_login");
+        let admin_login_button = document.getElementById("admin_login");
+        let about_button = document.getElementById("about");
+        home_button.addEventListener('click',()=>{
+            window.location.href = 'index.html';
+        })
+         login_button.addEventListener('click',()=>{
+            window.location.href = 'customerLogin.html';
+        })
+         admin_login_button.addEventListener('click',()=>{
+            window.location.href = 'addminLogin.html';
+        })
+         home_button.addEventListener('click',()=>{
+            window.location.href = 'index.html';
+        })
+    </script>
+    
+</body>
+</html>
+	
+	
